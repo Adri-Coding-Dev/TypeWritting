@@ -1,0 +1,30 @@
+.background {
+    -fx-background-color: #1e1e1e;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #00ffcc;
+    -fx-font-weight: bold;
+}
+
+.timer {
+    -fx-text-fill: #ffcc00;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.target {
+    -fx-font-size: 28px;
+    -fx-text-fill: #ffffff;
+}
+
+.button {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-background-color: #222;
+    -fx-text-fill: white;
+}

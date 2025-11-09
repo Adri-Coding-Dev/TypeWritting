@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ResultController" prefWidth="400" prefHeight="300" styleClass="background">
+    <VBox alignment="CENTER" spacing="10" prefWidth="400" prefHeight="300">
+        <Label fx:id="wpmLabel" text="Velocidad: "/>
+        <Label fx:id="accuracyLabel" text="Precisión: "/>
+        <Label fx:id="correctLabel" text="Aciertos: "/>
+        <Label fx:id="wrongLabel" text="Errores: "/>
+        <Button text="Volver al menú" onAction="#onBackToMenu"/>
+    </VBox>
+</AnchorPane>

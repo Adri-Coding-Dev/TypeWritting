@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.GameController"
+            prefWidth="800"
+            prefHeight="500"
+            style="-fx-background-color: #1e1e1e; -fx-text-fill: white;">
+
+    <!-- TOP: Header -->
+    <top>
+        <VBox alignment="CENTER">
+            <padding>
+                <Insets top="15" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label text="Speed Typing Challenge"
+                   style="-fx-text-fill: white;">
+                <font>
+                    <Font name="Consolas Bold" size="26"/>
+                </font>
+            </Label>
+            <Label fx:id="timerLabel"
+                   text="Tiempo restante: 60s"
+                   style="-fx-text-fill: #00bfff;">
+                <font>
+                    <Font name="Consolas" size="18"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- CENTER: Texto y entrada -->
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <TextArea fx:id="textToType"
+                      editable="false"
+                      wrapText="true"
+                      prefHeight="150"
+                      prefWidth="600"
+                      style="-fx-control-inner-background: #2b2b2b; -fx-text-fill: #ffffff; -fx-font-family: 'Consolas'; -fx-font-size: 16;"
+                      text="El zorro rápido salta sobre el perro perezoso. Escribe este texto tan rápido como puedas.">
+            </TextArea>
+
+            <TextField fx:id="inputField"
+                       promptText="Empieza a escribir aquí..."
+                       style="-fx-control-inner-background: #111; -fx-text-fill: #00ff9d; -fx-font-family: 'Consolas'; -fx-font-size: 16;"
+                       prefWidth="600"
+                       onKeyTyped="#onTextTyped"/>
+
+            <ProgressBar fx:id="progressBar"
+                         prefWidth="400"
+                         progress="0.0"
+                         style="-fx-accent: #00bfff;"/>
+        </VBox>
+    </center>
+
+    <!-- BOTTOM: Botones -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button fx:id="startButton"
+                    text="Reiniciar"
+                    onAction="#onRestart"
+                    style="-fx-background-color: #00bfff; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            <Button fx:id="backButton"
+                    text="Volver al menú"
+                    onAction="#onBackToMenu"
+                    style="-fx-background-color: #ff5050; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
