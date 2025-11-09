@@ -46,18 +46,29 @@ El objetivo principal es escribir el texto que aparece en pantalla lo más rápi
 ```text
 
 SpeedWriting/
-│
-├─ src/
-│ ├─ controller/
-│ │ ├─ MainMenuController.java
-│ │ └─ GameController.java
-│ ├─ view/
-│ │ ├─ main_menu.fxml
-│ │ └─ game.fxml
-│ └─ Main.java
-│
-├─ README.md
-└─ .gitignore
+|
+|- src/
+| |- controller/
+| | |- MainMenuController.java
+| | |- GameController.java
+| | |- ResultController.java
+| |
+| |- model/
+| |  |- GameStats.java
+| |  |- WordGenerator.java
+| |
+| |- resources/
+| |  |- style.css
+| |
+| |- view/
+| |  |- main_menu.fxml
+| |  |- result.fxml
+| |  |- game.fxml
+| |
+| |- main/
+|    |- Main.java
+|
+|- README.md
 ```
 ---
 
